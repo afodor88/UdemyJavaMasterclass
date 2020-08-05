@@ -12,7 +12,7 @@ public class LeapYear {
                 return false;
             }
 
-            return false;
+            return true;
         } 
 
         return false;

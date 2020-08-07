@@ -15,15 +15,15 @@ public class App {
         }
 
         long hours = minutes / 60;
-        long remianingMinutes = minutes % 60;
+        long remainingMinutes = minutes % 60;
 
         String hoursString = hours + "h";
         if(hours < 10) {
             hoursString = "0" + hoursString;
         }
 
-        String minutesString = remianingMinutes + "m";
-        if(remianingMinutes < 10) {
+        String minutesString = remainingMinutes + "m";
+        if(remainingMinutes < 10) {
             minutesString = "0" + minutesString;
         }
 

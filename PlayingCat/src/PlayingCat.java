@@ -6,12 +6,10 @@ public class PlayingCat {
             }
 
             return false;
-        } else if (summer) {
-            if (temperature >= 25 && temperature <= 45) {
-                return true;
-            }
-            return false;
+        } else if (temperature >= 25 && temperature <= 45) {
+            return true;
         }
+
         return false;
     }
 }

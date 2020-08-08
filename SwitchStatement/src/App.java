@@ -30,6 +30,42 @@ public class App {
                 break;
         }
 
+        char character = 'C';
+        switch (character) {
+            case 'A':
+                System.out.println("Character is A");
+                break;
+            case 'B':
+                System.out.println("Character is B");
+                break;
+            case 'C':
+                System.out.println("Character is C");
+                break;
+            case 'D':
+                System.out.println("Character is D");
+                break;
+            case 'E':
+                System.out.println("Character is E");
+                break;
+            default:
+                System.out.println("Could not find A, B, C, D or E");
+                break;
+        }
+
+        String month = "JANUARY";
+
+        switch (month.toLowerCase()) {
+            case "january":
+                System.out.println("Jan");
+                break;
+            case "june":
+                System.out.println("Jun");
+                break;
+
+            default:
+                System.out.println("Not sure");
+        }
+
         // More code here
     }
 }

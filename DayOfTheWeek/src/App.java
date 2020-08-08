@@ -4,7 +4,7 @@ public class App {
         printDayOfTheWeek2(6);
     }
 
-    public static void printDayOfTheWeek(int day) {
+    private static void printDayOfTheWeek(int day) {
         switch (day) {
             case 0:
                 System.out.println("Sunday");
@@ -34,7 +34,7 @@ public class App {
 
     }
 
-    public static void printDayOfTheWeek2(int day) {
+    private static void printDayOfTheWeek2(int day) {
         if (day == 0) {
             System.out.println("Sunday");
         } else if (day == 1) {

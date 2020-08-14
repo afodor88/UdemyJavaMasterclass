@@ -5,10 +5,10 @@ public class App {
 
         Scanner scanner = new Scanner(System.in);
 
-        int min = 0;
-        int max = 0;
+        int min = 2147483647;
+        int max = -2147483648;
 
-        boolean first = true;
+        // boolean first = true;
 
         while (true) {
             System.out.println("Enter number:");
@@ -18,11 +18,11 @@ public class App {
 
                 int number = scanner.nextInt();
 
-                if (first) {
-                    first = false;
-                    min = number;
-                    max = number;
-                }
+                // if (first) {
+                //     first = false;
+                //     min = number;
+                //     max = number;
+                // }
 
                 if (number > max) {
                     max = number;

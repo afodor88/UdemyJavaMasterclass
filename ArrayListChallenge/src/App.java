@@ -22,7 +22,6 @@ public class App {
                     break;
                 case 1:
                     mobilePhone.printContacts();
-                    ;
                     break;
                 case 2:
                     addNewContact();

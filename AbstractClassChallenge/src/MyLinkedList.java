@@ -38,7 +38,7 @@ public class MyLinkedList implements NodeList {
                     currentItem.previous().setNext(newItem).setPrevious(currentItem.previous());
                     newItem.setNext(currentItem).setPrevious(newItem);
                 } else {
-                    // the node with a previous is the root
+                    // the node without a previous is the root
                     newItem.setNext(this.root).setPrevious(newItem);
                     this.root = newItem;
                 }

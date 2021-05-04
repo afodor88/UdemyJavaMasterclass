@@ -26,9 +26,9 @@ public class App {
         }
 
 
-        List<Theatre.Seat> revertSeats = new ArrayList<>(theatre.getSeats());
-        Collections.reverse(revertSeats);
-        printList(revertSeats);
+        List<Theatre.Seat> reverseSeats = new ArrayList<>(theatre.getSeats());
+        Collections.reverse(reverseSeats);
+        printList(reverseSeats);
 
         List<Theatre.Seat> priceSeats = new ArrayList<>(theatre.getSeats());
         priceSeats.add(theatre.new Seat("B00", 13.00));

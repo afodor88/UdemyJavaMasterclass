@@ -76,6 +76,11 @@ public class Theatre {
             this.price = price;
         }
 
+        @Override
+        public int compareTo(Seat seat) {
+            return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
+        }
+
         public boolean reserve() {
             if (!this.reserved) {
                 this.reserved = true;
@@ -104,10 +109,7 @@ public class Theatre {
             return price;
         }
 
-        @Override
-        public int compareTo(Seat seat) {
-            return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
-        }
+
 
     }
 

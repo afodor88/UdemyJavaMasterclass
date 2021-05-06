@@ -7,9 +7,9 @@ public class Location{
     private final Map<String, Integer> exits;
 
 
-    public Location(int locationId, String decription) {
+    public Location(int locationId, String description) {
         this.locationId = locationId;
-        this.decription = decription;
+        this.decription = description;
         this.exits = new HashMap<String, Integer>();
     }
 
@@ -22,7 +22,7 @@ public class Location{
         return this.locationId;
     }
 
-    public String getDecription() {
+    public String getDescription() {
         return this.decription;
     }
 

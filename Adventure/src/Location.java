@@ -3,14 +3,18 @@ import java.util.Map;
 
 public class Location{
     private final int locationId;
-    private final String decription;
+    private final String description;
     private final Map<String, Integer> exits;
 
 
     public Location(int locationId, String description, Map<String, Integer> exits) {
         this.locationId = locationId;
-        this.decription = description;
-        this.exits = new HashMap<>(exits);
+        this.description = description;
+        if(exits != null){
+            this.exits = new HashMap<>(exits);
+        } else {
+            this.exits = new HashMap<>();
+        }
         this.exits.put("Q", 0);
     }
 
@@ -24,7 +28,7 @@ public class Location{
     }
 
     public String getDescription() {
-        return this.decription;
+        return this.description;
     }
 
     public Map<String,Integer> getExits() {

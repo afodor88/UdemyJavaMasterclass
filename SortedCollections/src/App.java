@@ -86,10 +86,29 @@ public class App {
             System.out.println("We don't sell " + item);
             return 0;
         }
-        if(stockList.sellStock(item, quantity) != 0){
-            basket.addToBasket(stockItem, quantity);
-            return quantity;
+        if(stockList.reserveStock(item, quantity) != 0){
+            return basket.addToBasket(stockItem, quantity);
         }
         return 0;
+    }
+
+    public static int removeItem(Basket basket, String item, int quantity){
+        //retrive the item from the stock list
+        StockItem stockItem = stockList.get(item);
+        if(stockItem == null){
+            System.out.println("We don't sell " + item);
+            return 0;
+        }
+        if(basket.removeFromBasket(stockItem, quantity) == quantity){
+            return stockList.unreserveStock(item, quantity);
+        }
+        return 0;
+    }
+
+    public static void checkOut(Basket basket){
+        for (Map.Entry<StockItem, Integer> item : basket.Items().entrySet()){
+            stockList.sellStock(item.getKey().getName(), item.getValue());
+        }
+        basket.clearBasket();
     }
 }

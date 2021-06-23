@@ -24,7 +24,7 @@ public class Basket {
         return Collections.unmodifiableMap(list);
     }
 
-    public int remoteFromBasket(StockItem item, int quantity) {
+    public int removeFromBasket(StockItem item, int quantity) {
         if ((item != null) && (quantity > 0)) {
             // check if we already have the item in the basket
             int inBasket = list.getOrDefault(item, 0);
@@ -38,6 +38,10 @@ public class Basket {
             }
         }
         return 0;
+    }
+
+    public void clearBasket(){
+        this.list.clear();
     }
 
     @Override

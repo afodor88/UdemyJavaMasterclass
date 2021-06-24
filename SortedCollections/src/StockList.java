@@ -80,7 +80,7 @@ public class StockList {
 
     @Override
     public String toString() {
-        String s = "\sStock List\n";
+        String s = "\nStock List\n";
         double totalCost = 0.0;
         for(Map.Entry<String, StockItem> item: list.entrySet()){
             StockItem stockItem = item.getValue();
